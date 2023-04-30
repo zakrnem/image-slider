@@ -1,0 +1,116 @@
+:root {
+    --main: #1d9cf0;
+    --main-filter: invert(51%) sepia(62%) saturate(2721%) hue-rotate(178deg) brightness(98%) contrast(93%);
+    --secondary: #4fadec;
+    --secondary-filter: invert(57%) sepia(88%) saturate(412%) hue-rotate(172deg) brightness(94%) contrast(96%);
+    --tertiary: #94cdf3;
+    --tertiary-filter: invert(76%) sepia(34%) saturate(561%) hue-rotate(176deg) brightness(99%) contrast(92%);
+    --hover: #e6d5f5;
+    --inverse: #ff9f00;
+    --inverse-filter: invert(59%) sepia(14%) saturate(5380%) hue-rotate(4deg) brightness(108%) contrast(104%);
+    --inverse-active: #c17700;
+    --inverse-active-filter: invert(45%) sepia(51%) saturate(3869%) hue-rotate(23deg) brightness(98%) contrast(101%);
+    --white-filter: invert(86%) sepia(100%) saturate(1764%) hue-rotate(182deg) brightness(130%) contrast(100%);
+    --border-radius: 7px;
+    --separator: solid 3px #aaaaaa;
+    --button-padding: 0.75rem 1.5rem;
+    --button-border-radius: 0.7rem;
+    --transition-time: 0.2s;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    user-select: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--main);
+    box-shadow: 0 5px 5px rgb(178 178 178);
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.header-logo {
+    height: 4rem;
+    filter: var(--white-filter)
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+.display-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.button {
+    height: 3rem;
+    filter: var(--main-filter)
+}
+
+.left {
+    transform: rotate(180deg);
+}
+
+.button:hover {
+    filter: var(--secondary-filter)
+}
+
+.button:active {
+    filter: var(--inverse-filter)
+}
+
+.current-image {
+    width: 50vw;
+}
+
+
+footer {
+    background-color: var(--main);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 0;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    margin-top: 1.5rem;
+    font-weight: 300;
+}
+
+.github {
+    height: 1.5rem;
+    width:auto;
+    fill: white
+}
+
+.github:hover {
+    transform: rotate(720deg);
+    transition: transform 1.5s;
+    fill: white
+}
