@@ -5,6 +5,7 @@
     --secondary-filter: invert(57%) sepia(88%) saturate(412%) hue-rotate(172deg) brightness(94%) contrast(96%);
     --tertiary: #94cdf3;
     --tertiary-filter: invert(76%) sepia(34%) saturate(561%) hue-rotate(176deg) brightness(99%) contrast(92%);
+    --darker-main: #006cb3;
     --hover: #e6d5f5;
     --inverse: #ff9f00;
     --inverse-filter: invert(59%) sepia(14%) saturate(5380%) hue-rotate(4deg) brightness(108%) contrast(104%);
@@ -89,6 +90,31 @@ header {
     width: 50vw;
 }
 
+.navigation-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+[id^='navigation-dot'] {
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    border: 0.9rem solid var(--darker-main);
+}
+
+[id^='navigation-dot']:hover {
+    border: 0.9rem solid var(--secondary);
+}
+
+[id^='navigation-dot']:active {
+    border: 0.9rem solid var(--inverse);
+}
+
+.navigation-line {
+    border: 0.15rem solid var(--darker-main);
+    margin: 0 9%;
+    margin-bottom: -0.9rem;
+}
 
 footer {
     background-color: var(--main);
