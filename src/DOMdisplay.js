@@ -3,6 +3,7 @@ export function imageDisplay(currentImage) {
     const displayContainer = content.querySelector('.display-container')
     
     if (!displayContainer) {
+        const navigationLine = document.querySelector('.navigation-line')
         const container = document.createElement('div')
         container.className = 'display-container'
 
@@ -19,7 +20,7 @@ export function imageDisplay(currentImage) {
         rightButton.className = 'right button'
 
         container.append(leftButton, image, rightButton)
-        content.append(container)
+        content.insertBefore(container, navigationLine)
     }
     else {
         const image = document.querySelector('.current-image')

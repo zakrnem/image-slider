@@ -1,7 +1,2 @@
-General layout:
-    1. Header: add a logo & title.
-    2. Image display:
-        Arrows by the sides.
-        Main image in the center.
-    3. Navigation dots.
-    4. Footer
+1. Change color of arrow buttons when using keyboard.
+2. Add transitions.

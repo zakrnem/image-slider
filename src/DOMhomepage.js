@@ -5,9 +5,11 @@ import { navigationLogic } from "./navigationLogic";
 
 export function homepage() {
     header()
-    navigationLogic('initial')
     navigationDots()
     footer()
+    navigationLogic('initial')
+
+    setInterval(() =>navigationLogic('right'),5000)
 
     document.addEventListener('click', (e) => {
         switch (true) {
