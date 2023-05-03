@@ -1,12 +1,12 @@
 import { imageDisplay } from "./DOMdisplay"
 
+let index = 0
+
 export function storedImages(operand) {
     //Add an index
     //On initial reading return 1st image
     //Then add or substract the index
     //How can I tell the program that 0 is next to 9?
-    let index = 0
-
     const imageStorage = [
         'car',
         'keyboard',
@@ -21,6 +21,12 @@ export function storedImages(operand) {
     ]
 
     if (!isNaN(operand)) {
-        return imageDisplay(imageStorage[index+operand])
+        index += operand
+        console.log(index)
+        return imageDisplay(imageStorage[index])
+    }
+    else if(operand.includes('#')) {
+        index = operand.match(/\d+/)[0]-1
+        return imageDisplay(imageStorage[index])
     }
 }

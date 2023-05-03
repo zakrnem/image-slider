@@ -1,8 +1,10 @@
 export function imageDisplay(currentImage) {
     const content = document.getElementById('content')
-
-    const container = document.createElement('div')
-    container.className = 'display-container'
+    const displayContainer = content.querySelector('.display-container')
+    
+    if (!displayContainer) {
+        const container = document.createElement('div')
+        container.className = 'display-container'
 
         const image = document.createElement('img')
         image.src = `./images/${currentImage}.jpg`
@@ -17,6 +19,13 @@ export function imageDisplay(currentImage) {
         rightButton.className = 'right button'
 
         container.append(leftButton, image, rightButton)
+        content.append(container)
+    }
+    else {
+        const image = document.querySelector('.current-image')
+        image.src = `./images/${currentImage}.jpg`
+    }
 
-    content.append(container)
+
+    
 }

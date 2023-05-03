@@ -13,9 +13,5 @@ export function navigationDots() {
             container.appendChild(navDot)
         }
 
-        content.append(navLine)
-
-    
-
-    content.append(container)
+    content.append(navLine, container)
 }

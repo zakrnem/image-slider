@@ -12,14 +12,14 @@ export function homepage() {
     document.addEventListener('click', (e) => {
         switch (true) {
             case (e.target.className.includes('right')):
-                console.log('Right button')
+                navigationLogic('right')
                 break
             case (e.target.className.includes('left')):
-                console.log('Left button')
+                navigationLogic('left')
                 break
             case (e.target.id.includes('navigation-dot')):
                 const idNumber = e.target.id.match(/\d+/)[0]
-                console.log(`Nav dot #${idNumber}`)
+                navigationLogic(idNumber)
                 break
         }
     })
