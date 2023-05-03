@@ -23,4 +23,20 @@ export function homepage() {
                 break
         }
     })
+    document.addEventListener('keydown', (e) => {
+        switch (true) {
+            case (e.key.includes('Right') ||
+            e.code === 'Space'):
+                navigationLogic('right')
+                break
+            case (e.key.includes('Left') ||
+            e.key === 'Backspace'):
+                navigationLogic('left')
+                break
+            case (!isNaN(e.key)):
+                const idNumber = e.key.match(/\d+/)[0]
+                navigationLogic(idNumber)
+                break
+        }
+    })
 }

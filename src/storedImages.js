@@ -22,7 +22,12 @@ export function storedImages(operand) {
 
     if (!isNaN(operand)) {
         index += operand
-        console.log(index)
+        if (index < 0) {
+            index += 10
+        }
+        else if (index > 9) {
+            index -= 10
+        }
         return imageDisplay(imageStorage[index])
     }
     else if(operand.includes('#')) {
