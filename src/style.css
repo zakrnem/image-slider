@@ -67,7 +67,7 @@ header {
     justify-content: space-between;
     height: 100%;
     padding: 0 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .button {
@@ -88,8 +88,10 @@ header {
 }
 
 .current-image {
-    max-width: 50vw;
-    max-height: 60vh;
+    max-width: 60vw;
+    max-height: 65vh;
+    transition: opacity 0.5s;
+    border-radius: .5rem;
 }
 
 .navigation-container {

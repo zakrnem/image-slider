@@ -24,7 +24,9 @@ export function imageDisplay(currentImage) {
     }
     else {
         const image = document.querySelector('.current-image')
-        image.src = `./images/${currentImage}.jpg`
+        image.style.opacity = '0'
+        setTimeout(() => image.src = `./images/${currentImage}.jpg`, 500)
+        setTimeout(() => image.style.opacity = '1', 500)
     }
 
 
