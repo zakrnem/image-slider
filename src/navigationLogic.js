@@ -1,3 +1,4 @@
+import { changeArrowColor } from "./DOMarrowColor";
 import { storedImages } from "./storedImages";
 
 export function navigationLogic(input) {
@@ -7,9 +8,11 @@ export function navigationLogic(input) {
             break
         case (input === 'right'):
             storedImages(1)
+            changeArrowColor(input)
             break
         case (input === 'left'):
             storedImages(-1)
+            changeArrowColor(input)
             break
         case (!isNaN(input)):
             storedImages(`#${input}`)

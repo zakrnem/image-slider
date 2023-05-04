@@ -1,2 +1,1 @@
-1. Change color of arrow buttons when using keyboard.
-2. Add transitions.
+1. Add transitions.

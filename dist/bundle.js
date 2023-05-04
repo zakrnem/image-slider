@@ -100,6 +100,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/DOMarrowColor.js":
+/*!******************************!*\
+  !*** ./src/DOMarrowColor.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"changeArrowColor\": () => (/* binding */ changeArrowColor)\n/* harmony export */ });\nfunction changeArrowColor(input) {\n    const leftButton = document.querySelector('.left')\n    const rightButton = document.querySelector('.right')\n\n    if (input === 'left') {\n        leftButton.style.filter = 'var(--inverse-filter)'\n        setTimeout(() => leftButton.style.filter = '',100)\n    }\n    else if (input === 'right') {\n        rightButton.style.filter = 'var(--inverse-filter)'\n        setTimeout(() => rightButton.style.filter = '',100)\n    }\n}\n\n//# sourceURL=webpack://image-slider/./src/DOMarrowColor.js?");
+
+/***/ }),
+
 /***/ "./src/DOMdisplay.js":
 /*!***************************!*\
   !*** ./src/DOMdisplay.js ***!
@@ -116,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"changeDotColor\": () => (/* binding */ changeDotColor)\n/* harmony export */ });\nconst previousDot = []\n\nfunction changeDotColor (number) {\n    if (previousDot.length === 1) {\n        const prevDot = document.querySelector(`#navigation-dot${previousDot[0]}`)\n        prevDot.removeAttribute('style')\n    }\n\n    const dot = document.querySelector(`#navigation-dot${number+1}`)\n    dot.style.border = '0.9rem solid var(--tertiary)'\n\n    previousDot[0] = number+1\n}\n\n//# sourceURL=webpack://image-slider/./src/DOMdotColor.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"changeDotColor\": () => (/* binding */ changeDotColor)\n/* harmony export */ });\nconst previousDot = []\n\nfunction changeDotColor (number) {\n    if (previousDot.length === 1) {\n        const prevDot = document.querySelector(`#navigation-dot${previousDot[0]}`)\n        prevDot.removeAttribute('style')\n    }\n\n    const dot = document.querySelector(`#navigation-dot${number+1}`)\n    dot.style.border = '0.9rem solid var(--inverse)'\n    setTimeout(() => dot.style.border = '0.9rem solid var(--tertiary)', 100)\n\n    previousDot[0] = number+1\n}\n\n//# sourceURL=webpack://image-slider/./src/DOMdotColor.js?");
 
 /***/ }),
 
@@ -176,7 +186,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"navigationLogic\": () => (/* binding */ navigationLogic)\n/* harmony export */ });\n/* harmony import */ var _storedImages__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storedImages */ \"./src/storedImages.js\");\n\n\nfunction navigationLogic(input) {\n    switch (true) {\n        case (input === 'initial'):\n            (0,_storedImages__WEBPACK_IMPORTED_MODULE_0__.storedImages)(0)\n            break\n        case (input === 'right'):\n            ;(0,_storedImages__WEBPACK_IMPORTED_MODULE_0__.storedImages)(1)\n            break\n        case (input === 'left'):\n            ;(0,_storedImages__WEBPACK_IMPORTED_MODULE_0__.storedImages)(-1)\n            break\n        case (!isNaN(input)):\n            ;(0,_storedImages__WEBPACK_IMPORTED_MODULE_0__.storedImages)(`#${input}`)\n            break\n    }\n}\n\n//# sourceURL=webpack://image-slider/./src/navigationLogic.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"navigationLogic\": () => (/* binding */ navigationLogic)\n/* harmony export */ });\n/* harmony import */ var _DOMarrowColor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DOMarrowColor */ \"./src/DOMarrowColor.js\");\n/* harmony import */ var _storedImages__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./storedImages */ \"./src/storedImages.js\");\n\n\n\nfunction navigationLogic(input) {\n    switch (true) {\n        case (input === 'initial'):\n            (0,_storedImages__WEBPACK_IMPORTED_MODULE_1__.storedImages)(0)\n            break\n        case (input === 'right'):\n            ;(0,_storedImages__WEBPACK_IMPORTED_MODULE_1__.storedImages)(1)\n            ;(0,_DOMarrowColor__WEBPACK_IMPORTED_MODULE_0__.changeArrowColor)(input)\n            break\n        case (input === 'left'):\n            ;(0,_storedImages__WEBPACK_IMPORTED_MODULE_1__.storedImages)(-1)\n            ;(0,_DOMarrowColor__WEBPACK_IMPORTED_MODULE_0__.changeArrowColor)(input)\n            break\n        case (!isNaN(input)):\n            ;(0,_storedImages__WEBPACK_IMPORTED_MODULE_1__.storedImages)(`#${input}`)\n            break\n    }\n}\n\n//# sourceURL=webpack://image-slider/./src/navigationLogic.js?");
 
 /***/ }),
 
