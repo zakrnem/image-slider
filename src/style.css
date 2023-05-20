@@ -19,23 +19,6 @@
     --transition-time: 0.2s;
   }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-size: inherit;
-    font-family: inherit;
-    user-select: none;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
 header {
     background-color: var(--main);
     box-shadow: 0 5px 5px rgb(178 178 178);
@@ -122,25 +105,4 @@ header {
 
 footer {
     background-color: var(--main);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.4rem 0;
-    gap: 0.5rem;
-    flex-shrink: 0;
-    margin-top: 1.5rem;
-    font-weight: 300;
-}
-
-.github {
-    height: 1.5rem;
-    width:auto;
-    fill: white
-}
-
-.github:hover {
-    transform: rotate(720deg);
-    transition: transform 1.5s;
-    fill: white
 }

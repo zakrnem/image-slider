@@ -1,5 +1,5 @@
 import { header } from "./DOMheader";
-import { footer } from "./DOMfooter"
+import { footer } from "footer-zkrnem";
 import { navigationDots } from "./DOMnavDots";
 import { navigationLogic } from "./navigationLogic";
 
