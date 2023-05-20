@@ -10,7 +10,7 @@
   "dependencies": {
     "core-js": "^3.29.1",
     "css-loader": "^6.7.3",
-    "footer-zkrnem": "lastest",
+    "footer-zkrnem": "latest",
     "gh-pages": "^5.0.0",
     "loader-runner": "^4.3.0",
     "source-map-loader": "^4.0.1",
